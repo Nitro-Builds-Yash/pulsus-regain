@@ -176,10 +176,10 @@ function initMouseGlow() {
     document.body.style.setProperty('--mouse-screen-y', `${mouseY}px`);
   }, { passive: true });
 
-  // Fluid trailing animation loop for ring
+  // Kinoria Spring Physics: Aim frame chases the pointer dot with spring tension
   function renderCursorPhysics() {
-    ringX += (mouseX - ringX) * 0.18;
-    ringY += (mouseY - ringY) * 0.18;
+    ringX += (mouseX - ringX) * 0.22;
+    ringY += (mouseY - ringY) * 0.22;
 
     if (ring) {
       ring.style.left = `${ringX.toFixed(2)}px`;
@@ -189,8 +189,12 @@ function initMouseGlow() {
   }
   renderCursorPhysics();
 
-  // Dynamic cursor scale up on interactive hover
-  const interactives = document.querySelectorAll('a, button, input, select, .bento-box-card, .bat-toggle-btn, .segment-tab-btn');
+  // Mouse down/up shutter compression
+  window.addEventListener('mousedown', () => document.body.classList.add('cursor-down'));
+  window.addEventListener('mouseup', () => document.body.classList.remove('cursor-down'));
+
+  // Dynamic cursor scale up & lock-on on interactive hover
+  const interactives = document.querySelectorAll('a, button, input, select, .bento-box-card, .bat-toggle-btn, .segment-tab-btn, .scattered-tag');
   interactives.forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
@@ -1636,26 +1640,29 @@ const FRAME_DESCRIPTIONS = [
 function triggerViewfinderExposure() {
   const frameEl = document.getElementById('viewfinderFrame');
   const countEl = document.getElementById('vfFrameCount');
+  const scatterExpEl = document.getElementById('scatterExpVal');
   const safelightLabel = document.getElementById('safelightStateLabel');
   const latencyVal = document.getElementById('vfLatencyVal');
   const agitationVal = document.getElementById('vfAgitationVal');
+  const phaseVal = document.getElementById('vfPhaseVal');
 
   if (!frameEl) return;
 
-  // 1. Analog shutter flash effect
+  // 1. Analog shutter flash effect (clean optical flash)
   const flash = document.createElement('div');
   flash.className = 'darkroom-shutter-flash';
   frameEl.appendChild(flash);
-  setTimeout(() => flash.remove(), 350);
+  setTimeout(() => flash.remove(), 320);
 
   // 2. Cycle frame counter (01 -> 04 -> 01)
   currentVfFrame = (currentVfFrame % TOTAL_VF_FRAMES) + 1;
   const frameStr = currentVfFrame < 10 ? `0${currentVfFrame}` : `${currentVfFrame}`;
   if (countEl) countEl.textContent = frameStr;
+  if (scatterExpEl) scatterExpEl.textContent = frameStr;
 
   // 3. Dynamic Darkroom Metadata changes
   if (latencyVal) {
-    const lat = (0.8 + Math.random() * 0.9).toFixed(1);
+    const lat = (0.8 + Math.random() * 0.7).toFixed(1);
     latencyVal.textContent = `${lat}ms`;
   }
 
@@ -1667,6 +1674,10 @@ function triggerViewfinderExposure() {
   ];
   if (agitationVal) {
     agitationVal.textContent = agitationStates[currentVfFrame - 1];
+  }
+
+  if (phaseVal) {
+    phaseVal.textContent = `DEVELOPING (${frameStr}/04)`;
   }
 
   if (safelightLabel) {

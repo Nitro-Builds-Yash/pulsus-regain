@@ -79,54 +79,81 @@ body.studio-theme {
   min-height: 100vh;
 }
 
-/* Custom Interactive Cursor Dot & Fluid Trailing Ring */
+/* ==========================================================================
+   KINORIA 135 MECHANICAL AIMING FRAME CURSOR
+   Reference: Kinoria 'Four Minutes in the Dark' cursor mechanics
+   ========================================================================== */
 .custom-cursor-dot {
   position: fixed;
   top: 0;
   left: 0;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background: #ffffff;
   border-radius: 50%;
   pointer-events: none;
   z-index: 99999;
   transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease, transform 0.15s ease-out;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  transition: opacity 0.2s ease, transform 0.1s ease-out, background-color 0.2s ease;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.95);
 }
 
-.custom-cursor-ring {
+.custom-cursor-ring.kinoria-aim-frame {
   position: fixed;
   top: 0;
   left: 0;
-  width: 38px;
-  height: 38px;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50%;
+  width: 32px;
+  height: 26px;
+  border: none;
+  border-radius: 0;
   pointer-events: none;
   z-index: 99998;
   transform: translate(-50%, -50%);
-  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-              height 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.25s ease, 
-              background 0.25s ease,
-              transform 0.1s ease-out;
-  backdrop-filter: blur(1px);
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.22s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.12s ease-out;
+  background: transparent;
+  backdrop-filter: none;
 }
 
-/* Cursor Interactive Hover State on Clickables */
+/* 4 Kinoria Corner Bracket Legs */
+.kinoria-aim-frame .kf-corner {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-color: rgba(255, 255, 255, 0.7);
+  border-style: solid;
+  transition: border-color 0.2s ease, width 0.2s ease, height 0.2s ease;
+}
+
+.kinoria-aim-frame .kf-tl { top: 0; left: 0; border-width: 1.5px 0 0 1.5px; }
+.kinoria-aim-frame .kf-tr { top: 0; right: 0; border-width: 1.5px 1.5px 0 0; }
+.kinoria-aim-frame .kf-bl { bottom: 0; left: 0; border-width: 0 0 1.5px 1.5px; }
+.kinoria-aim-frame .kf-br { bottom: 0; right: 0; border-width: 0 1.5px 1.5px 0; }
+
+/* Interactive Hover: Lock-on focus squeeze and cyan/emerald confirmation */
 body.cursor-hover .custom-cursor-dot {
-  transform: translate(-50%, -50%) scale(1.5);
   background: #38bdf8;
-  box-shadow: 0 0 14px rgba(56, 189, 248, 1);
+  box-shadow: 0 0 12px #38bdf8;
+  transform: translate(-50%, -50%) scale(1.3);
 }
 
-body.cursor-hover .custom-cursor-ring {
-  width: 52px;
-  height: 52px;
-  border-color: rgba(56, 189, 248, 0.6);
-  background: rgba(56, 189, 248, 0.06);
+body.cursor-hover .kinoria-aim-frame {
+  width: 42px;
+  height: 36px;
 }
+
+body.cursor-hover .kinoria-aim-frame .kf-corner {
+  border-color: #38bdf8;
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.4);
+}
+
+/* Shutter press / mouse down squeeze */
+body.cursor-down .kinoria-aim-frame {
+  width: 20px;
+  height: 18px;
+}
+
 
 .container {
   width: 100%;
@@ -1017,8 +1044,8 @@ body.cursor-hover .custom-cursor-ring {
 }
 
 .viewfinder-frame:hover .vf-corner {
-  border-color: #f59e0b;
-  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
 }
 
 /* HUD Strips (Top & Bottom) */
@@ -1058,8 +1085,8 @@ body.cursor-hover .custom-cursor-ring {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #ef4444;
-  box-shadow: 0 0 10px #ef4444;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
   animation: recBlink 1.4s infinite ease-in-out;
 }
 
@@ -1092,9 +1119,9 @@ body.cursor-hover .custom-cursor-ring {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(245, 158, 11, 0.08);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  color: #f59e0b;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38bdf8;
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-xs);
   font-size: 0.68rem;
@@ -1105,8 +1132,8 @@ body.cursor-hover .custom-cursor-ring {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #f59e0b;
-  box-shadow: 0 0 8px #f59e0b;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
 }
 
 /* Center Crosshair Reticle */
@@ -1171,77 +1198,207 @@ body.cursor-hover .custom-cursor-ring {
   white-space: nowrap;
 }
 
-/* Darkroom Accents */
-.darkroom-beacon {
-  border-color: rgba(245, 158, 11, 0.25);
-  background: rgba(245, 158, 11, 0.05);
+/* ==========================================================================
+   SCATTERED PERIPHERAL HUD FIELD (Kinoria Composition)
+   ========================================================================== */
+.scattered-hud-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
 }
 
-.darkroom-amber-pulse {
+.scattered-tag {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.45);
+  background: rgba(10, 14, 22, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-xs);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.scattered-tag:hover {
+  color: #fff;
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(14, 20, 32, 0.85);
+  transform: translateY(-2px);
+}
+
+.tag-top-left {
+  top: 1.5rem;
+  left: 3rem;
+}
+
+.tag-top-right {
+  top: 1.5rem;
+  right: 3rem;
+}
+
+.tag-mid-left {
+  top: 48%;
+  left: 2rem;
+  transform: translateY(-50%);
+}
+
+.tag-mid-right {
+  top: 48%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+
+.tag-bottom-left {
+  bottom: 1.5rem;
+  left: 3.5rem;
+}
+
+.tag-bottom-right {
+  bottom: 1.5rem;
+  right: 3.5rem;
+}
+
+.pulse-cyan-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  animation: recBlink 1.4s infinite ease-in-out;
+}
+
+.tag-status-badge {
+  font-size: 0.62rem;
+  padding: 0.15rem 0.45rem;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: var(--radius-xs);
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.scattered-bracket {
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+  .tag-mid-left, .tag-mid-right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .scattered-hud-field {
+    display: none;
+  }
+}
+
+/* Darkroom Reticles and Monochrome Accents (Zero Yellow) */
+.viewfinder-frame:hover .vf-corner {
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.darkroom-beacon {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.darkroom-cyan-pulse {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #f59e0b;
-  box-shadow: 0 0 12px #f59e0b;
+  background: #38bdf8;
+  box-shadow: 0 0 12px #38bdf8;
   animation: batSignalPulse 1.8s infinite ease-in-out;
 }
 
-.text-amber {
-  color: #f59e0b !important;
+.vf-badge-safelight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f1f5f9;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-xs);
+  font-size: 0.68rem;
+  font-weight: 700;
 }
 
-/* Interactive Shutter Release Button */
+.safelight-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+/* Interactive Shutter Release Button — Sleek Obsidian Glass (Zero Yellow) */
 .btn-darkroom-shutter {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  background: linear-gradient(135deg, #1e2230 0%, #0d1017 100%);
-  color: #f59e0b;
-  border: 1px solid rgba(245, 158, 11, 0.4);
+  gap: 0.65rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 0.85rem 1.6rem;
   border-radius: var(--radius-pill);
   font-weight: 700;
   font-size: 0.92rem;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
 .btn-darkroom-shutter:hover {
-  background: linear-gradient(135deg, #282f42 0%, #151a26 100%);
-  border-color: #f59e0b;
-  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #38bdf8;
+  color: #38bdf8;
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(245, 158, 11, 0.35);
+  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.25);
 }
 
 .btn-darkroom-shutter:active {
   transform: scale(0.97);
 }
 
-/* Shutter Snap Flash Overlay */
+/* Shutter Snap Flash Overlay (Clean White Optical Flash) */
 .darkroom-shutter-flash {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.85);
   z-index: 99;
   pointer-events: none;
-  animation: shutterFlash 0.32s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+  animation: shutterFlash 0.3s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
 }
 
 @keyframes shutterFlash {
-  0% { opacity: 0.9; }
-  40% { opacity: 0.65; background: rgba(245, 158, 11, 0.5); }
+  0% { opacity: 0.85; }
+  50% { opacity: 0.5; background: rgba(56, 189, 248, 0.3); }
   100% { opacity: 0; }
 }
 
 .darkroom-metrics {
-  border-color: rgba(245, 158, 11, 0.15);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Floating Metrics Ribbon */

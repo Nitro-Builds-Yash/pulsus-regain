@@ -29,9 +29,14 @@
     <div class="scroll-progress-bar" id="scrollProgressBar"></div>
   </div>
 
-  <!-- Custom Fluid Interactive Cursor Elements -->
+  <!-- Custom Kinoria-Style Aiming Frame & Center Precision Dot Cursor -->
   <div class="custom-cursor-dot" id="cursorDot"></div>
-  <div class="custom-cursor-ring" id="cursorRing"></div>
+  <div class="custom-cursor-ring kinoria-aim-frame" id="cursorRing">
+    <span class="kf-corner kf-tl"></span>
+    <span class="kf-corner kf-tr"></span>
+    <span class="kf-corner kf-bl"></span>
+    <span class="kf-corner kf-br"></span>
+  </div>
 
   <!-- Real-Time Production Status Strip -->
   <div class="top-status-strip">
@@ -86,15 +91,41 @@
   </header>
 
   <!-- ====================================================================
-       HERO SECTION — KINORIA INSPIRATION: "FOUR MINUTES IN THE DARK"
-       Optical Viewfinder HUD // Mechanical Corner Reticles // Darkroom Exposure Controls
+       HERO SECTION — KINORIA SCATTERED ARCHITECTURE: "FOUR MINUTES IN THE DARK"
+       Scattered Live HUD Telemetry // Precision Aiming Reticles // Monochrome + Ice-Cyan Palette
        ==================================================================== -->
   <section id="hero" class="hero-section darkroom-hero-section">
+    <!-- Scattered Peripheral Micro-Telemetry Floating Labels (Kinoria Composition) -->
+    <div class="scattered-hud-field" aria-hidden="true">
+      <div class="scattered-tag tag-top-left font-mono">
+        <span class="pulse-cyan-dot"></span>
+        <span>REC [04:00:00] &bull; SENSOR: 35MM FULL FRAME</span>
+      </div>
+      <div class="scattered-tag tag-top-right font-mono">
+        <span>EXPOSURE [ <span id="scatterExpVal" class="text-cyan">01</span> / 04 ]</span>
+        <span class="tag-status-badge">STANDBY</span>
+      </div>
+      <div class="scattered-tag tag-mid-left font-mono">
+        <span class="scattered-bracket">[</span>
+        <span>ISO 400 // ƒ/1.4 // 1/500s</span>
+        <span class="scattered-bracket">]</span>
+      </div>
+      <div class="scattered-tag tag-mid-right font-mono">
+        <span>FOCUS: PEAKING <span class="text-emerald">99.8%</span></span>
+      </div>
+      <div class="scattered-tag tag-bottom-left font-mono">
+        <span>NODES: <span class="text-cyan">10/10 SYNCHRONIZED</span></span>
+      </div>
+      <div class="scattered-tag tag-bottom-right font-mono">
+        <span>LATENCY: <span class="text-white" id="vfLatencyVal">1.2ms</span></span>
+      </div>
+    </div>
+
     <div class="container hero-content-center">
       
-      <!-- Optical Viewfinder Reticle Frame (Kinoria 135 Reference) -->
+      <!-- Optical Viewfinder Reticle Frame (Kinoria Reference) -->
       <div class="viewfinder-frame" id="viewfinderFrame">
-        <!-- Mechanical Optical Corners -->
+        <!-- Mechanical Optical Corners (Corner Reticles) -->
         <span class="vf-corner vf-tl" aria-hidden="true"></span>
         <span class="vf-corner vf-tr" aria-hidden="true"></span>
         <span class="vf-corner vf-bl" aria-hidden="true"></span>
@@ -106,15 +137,15 @@
             <span class="vf-rec-dot"></span>
             <span class="vf-meta-text">REC [04:00]</span>
             <span class="vf-pipe">/</span>
-            <span class="vf-meta-text">EXP <span id="vfFrameCount" class="text-amber">01</span>/04</span>
+            <span class="vf-meta-text">EXP <span id="vfFrameCount" class="text-cyan font-bold">01</span>/04</span>
           </div>
           <div class="vf-meta-center">
-            <span class="vf-lens-spec">FOCAL 50mm // ƒ/1.4 // 1/500s // ISO 400</span>
+            <span class="vf-lens-spec">FOCAL 50mm // ƒ/1.4 // 1/500s // ISO 400 // MONO CHROME</span>
           </div>
           <div class="vf-meta-group">
             <span class="vf-badge-safelight font-mono">
               <span class="safelight-indicator"></span>
-              <span id="safelightStateLabel">SAFELIGHT: AMBER 590NM</span>
+              <span id="safelightStateLabel">OPTICAL STANDBY: 430NM</span>
             </span>
           </div>
         </div>
@@ -129,9 +160,9 @@
 
         <!-- Live Beacon Pill -->
         <div class="hero-beacon-pill spatial-beacon-pill darkroom-beacon">
-          <span class="darkroom-amber-pulse"></span>
+          <span class="darkroom-cyan-pulse"></span>
           <span class="beacon-label font-mono">
-            <i data-lucide="camera" class="icon-xs text-amber"></i> FOUR MINUTES IN THE DARK // DEVELOPING AUTONOMOUS SIGNALS
+            <i data-lucide="camera" class="icon-xs text-cyan"></i> FOUR MINUTES IN THE DARK // DEVELOPING AUTONOMOUS SIGNALS
           </span>
         </div>
 
@@ -166,16 +197,16 @@
         <!-- Viewfinder Bottom HUD Bar -->
         <div class="vf-hud-strip vf-hud-bottom font-mono">
           <div class="vf-bottom-item">
-            <span class="vf-bottom-label">DARKROOM LATENCY:</span>
-            <span class="vf-bottom-val text-white" id="vfLatencyVal">1.2ms</span>
-          </div>
-          <div class="vf-bottom-item">
-            <span class="vf-bottom-label">CHEMICAL AGITATION:</span>
-            <span class="vf-bottom-val text-amber" id="vfAgitationVal">OPTIMAL (20&deg;C)</span>
+            <span class="vf-bottom-label">EXPOSURE PHASE:</span>
+            <span class="vf-bottom-val text-white" id="vfPhaseVal">DEVELOPING (01/04)</span>
           </div>
           <div class="vf-bottom-item">
             <span class="vf-bottom-label">SILVER HALIDE GRAIN:</span>
-            <span class="vf-bottom-val text-white">FINE 35MM</span>
+            <span class="vf-bottom-val text-cyan" id="vfAgitationVal">OPTIMAL (20&deg;C)</span>
+          </div>
+          <div class="vf-bottom-item">
+            <span class="vf-bottom-label">OPTICAL PASS:</span>
+            <span class="vf-bottom-val text-white">FINE 35MM ULTRA</span>
           </div>
           <div class="vf-bottom-item">
             <span class="vf-bottom-label">TARGET REPOS:</span>
@@ -193,17 +224,17 @@
         </div>
         <div class="metric-vertical-divider"></div>
         <div class="metric-segment">
-          <span class="metric-digit text-amber">04:00</span>
+          <span class="metric-digit text-cyan">04:00</span>
           <span class="metric-caption">Darkroom Exposure Sequence</span>
         </div>
         <div class="metric-vertical-divider"></div>
         <div class="metric-segment">
-          <span class="metric-digit text-cyan">5-Slot</span>
+          <span class="metric-digit text-emerald">5-Slot</span>
           <span class="metric-caption">Cloaked HTML Rotator</span>
         </div>
         <div class="metric-vertical-divider"></div>
         <div class="metric-segment">
-          <span class="metric-digit text-emerald">250 OK</span>
+          <span class="metric-digit text-white">250 OK</span>
           <span class="metric-caption">DNS MX Radar Verification</span>
         </div>
       </div>
