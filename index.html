@@ -85,51 +85,116 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section">
+  <!-- ====================================================================
+       HERO SECTION — KINORIA INSPIRATION: "FOUR MINUTES IN THE DARK"
+       Optical Viewfinder HUD // Mechanical Corner Reticles // Darkroom Exposure Controls
+       ==================================================================== -->
+  <section id="hero" class="hero-section darkroom-hero-section">
     <div class="container hero-content-center">
       
-      <!-- Live Beacon Pill -->
-      <div class="hero-beacon-pill spatial-beacon-pill">
-        <span class="spatial-signal-pulse"></span>
-        <span class="beacon-label font-mono"><i data-lucide="radio" class="icon-xs text-white"></i> HOLOGRAPHIC QUANTUM RUNTIME &bull; STEALTH DOM ORCHESTRATION</span>
-      </div>
+      <!-- Optical Viewfinder Reticle Frame (Kinoria 135 Reference) -->
+      <div class="viewfinder-frame" id="viewfinderFrame">
+        <!-- Mechanical Optical Corners -->
+        <span class="vf-corner vf-tl" aria-hidden="true"></span>
+        <span class="vf-corner vf-tr" aria-hidden="true"></span>
+        <span class="vf-corner vf-bl" aria-hidden="true"></span>
+        <span class="vf-corner vf-br" aria-hidden="true"></span>
 
-      <!-- Headline -->
-      <h1 class="hero-title-display">
-        Real-Time Autonomous Research &amp; Outreach Engines <br />
-        <span class="gradient-aurora-text">Mining Scholarly Signals &amp; Stealth Dispatch.</span>
-      </h1>
+        <!-- Viewfinder Peripheral Telemetry Header -->
+        <div class="vf-hud-strip vf-hud-top font-mono">
+          <div class="vf-meta-group">
+            <span class="vf-rec-dot"></span>
+            <span class="vf-meta-text">REC [04:00]</span>
+            <span class="vf-pipe">/</span>
+            <span class="vf-meta-text">EXP <span id="vfFrameCount" class="text-amber">01</span>/04</span>
+          </div>
+          <div class="vf-meta-center">
+            <span class="vf-lens-spec">FOCAL 50mm // ƒ/1.4 // 1/500s // ISO 400</span>
+          </div>
+          <div class="vf-meta-group">
+            <span class="vf-badge-safelight font-mono">
+              <span class="safelight-indicator"></span>
+              <span id="safelightStateLabel">SAFELIGHT: AMBER 590NM</span>
+            </span>
+          </div>
+        </div>
 
-      <p class="hero-statement">
-        Tactically architected by <strong>Athota Yashwanth</strong> (<a href="https://github.com/Nitro-Builds-Yash" target="_blank" rel="noopener noreferrer" class="author-handle-link">@Nitro-Builds-Yash</a>). Production-grade spatial AI subsystems: <strong>OmniScout</strong> intercepts medical intelligence across 10 encrypted scholarly nodes, while <strong>MimicMail</strong> deploys cloaked Chromium shadow sessions to bypass spam radar.
-      </p>
+        <!-- Central Crosshair Grid Reticle -->
+        <div class="vf-center-reticle" aria-hidden="true">
+          <div class="reticle-line reticle-h"></div>
+          <div class="reticle-line reticle-v"></div>
+          <div class="reticle-circle"></div>
+          <span class="reticle-readout font-mono">FOCUS LOCK &bull; 99.8%</span>
+        </div>
 
-      <div class="hero-cta-group">
-        <a href="#tactical-command-deck" class="btn btn-luxe-primary btn-glow-gold">
-          <i data-lucide="crosshair"></i>
-          <span>Explore Live 3D Spatial Deck</span>
-        </a>
-        <button type="button" class="btn btn-luxe-primary" onclick="openTestRunnerModal()">
-          <i data-lucide="flask-conical" class="icon-sm"></i>
-          <span>Run Live Test Suite</span>
-        </button>
-        <a href="#live-sandbox" class="btn btn-luxe-glass">
-          <i data-lucide="play"></i>
-          <span>Launch Interactive Operations</span>
-        </a>
+        <!-- Live Beacon Pill -->
+        <div class="hero-beacon-pill spatial-beacon-pill darkroom-beacon">
+          <span class="darkroom-amber-pulse"></span>
+          <span class="beacon-label font-mono">
+            <i data-lucide="camera" class="icon-xs text-amber"></i> FOUR MINUTES IN THE DARK // DEVELOPING AUTONOMOUS SIGNALS
+          </span>
+        </div>
+
+        <!-- Refined Editorial Headline -->
+        <h1 class="hero-title-display darkroom-title">
+          Autonomous Research &amp; Outreach Engines <br />
+          <span class="gradient-aurora-text">Mining Scholarly Signals In The Dark.</span>
+        </h1>
+
+        <!-- Editorial Subtitle with Subtle Monospace Meta -->
+        <p class="hero-statement darkroom-statement">
+          Architected by <strong>Athota Yashwanth</strong> (<a href="https://github.com/Nitro-Builds-Yash" target="_blank" rel="noopener noreferrer" class="author-handle-link">@Nitro-Builds-Yash</a>). Inspired by optical darkroom exposure dynamics: <strong>OmniScout</strong> intercepts medical signals across 10 encrypted scholarly nodes, while <strong>MimicMail</strong> orchestrates cloaked Chromium sessions to navigate unseen past spam radar.
+        </p>
+
+        <!-- Interactive Shutter & Exposure Actions -->
+        <div class="hero-cta-group">
+          <button type="button" class="btn btn-darkroom-shutter" id="btnShutterRelease" onclick="triggerViewfinderExposure()">
+            <span class="shutter-lens-ring"></span>
+            <i data-lucide="aperture" class="icon-sm"></i>
+            <span>Expose Sensor &bull; Cycle Frame</span>
+          </button>
+          <button type="button" class="btn btn-luxe-primary" onclick="openTestRunnerModal()">
+            <i data-lucide="flask-conical" class="icon-sm"></i>
+            <span>Run 9-Node Test Suite</span>
+          </button>
+          <a href="#tactical-command-deck" class="btn btn-luxe-glass">
+            <i data-lucide="orbit" class="icon-sm"></i>
+            <span>3D Spatial Orbit</span>
+          </a>
+        </div>
+
+        <!-- Viewfinder Bottom HUD Bar -->
+        <div class="vf-hud-strip vf-hud-bottom font-mono">
+          <div class="vf-bottom-item">
+            <span class="vf-bottom-label">DARKROOM LATENCY:</span>
+            <span class="vf-bottom-val text-white" id="vfLatencyVal">1.2ms</span>
+          </div>
+          <div class="vf-bottom-item">
+            <span class="vf-bottom-label">CHEMICAL AGITATION:</span>
+            <span class="vf-bottom-val text-amber" id="vfAgitationVal">OPTIMAL (20&deg;C)</span>
+          </div>
+          <div class="vf-bottom-item">
+            <span class="vf-bottom-label">SILVER HALIDE GRAIN:</span>
+            <span class="vf-bottom-val text-white">FINE 35MM</span>
+          </div>
+          <div class="vf-bottom-item">
+            <span class="vf-bottom-label">TARGET REPOS:</span>
+            <span class="vf-bottom-val text-emerald">3 SYNCHRONIZED</span>
+          </div>
+        </div>
+
       </div>
 
       <!-- Live Floating Metrics Ribbon -->
-      <div class="live-metrics-ribbon spatial-metrics-ribbon">
+      <div class="live-metrics-ribbon spatial-metrics-ribbon darkroom-metrics">
         <div class="metric-segment">
           <span class="metric-digit text-white">10</span>
           <span class="metric-caption">Scholarly Surveillance Nodes</span>
         </div>
         <div class="metric-vertical-divider"></div>
         <div class="metric-segment">
-          <span class="metric-digit text-emerald">100%</span>
-          <span class="metric-caption">Zero-Gmail Firewall Shield</span>
+          <span class="metric-digit text-amber">04:00</span>
+          <span class="metric-caption">Darkroom Exposure Sequence</span>
         </div>
         <div class="metric-vertical-divider"></div>
         <div class="metric-segment">
@@ -138,7 +203,7 @@
         </div>
         <div class="metric-vertical-divider"></div>
         <div class="metric-segment">
-          <span class="metric-digit text-white">250 OK</span>
+          <span class="metric-digit text-emerald">250 OK</span>
           <span class="metric-caption">DNS MX Radar Verification</span>
         </div>
       </div>

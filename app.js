@@ -1621,6 +1621,62 @@ function startAutomatedTestSuite() {
   runStep(0);
 }
 
+// ============================================================================
+// Kinoria "Four Minutes in the Dark" Optical Exposure & Frame Mechanics
+// ============================================================================
+let currentVfFrame = 1;
+const TOTAL_VF_FRAMES = 4;
+const FRAME_DESCRIPTIONS = [
+  "FRAME 01/04: INTERCEPTING EUROPE PMC SCHOLARLY HARVEST",
+  "FRAME 02/04: STEALTH CHROMIUM HEADLESS HANDSHAKE VERIFIED",
+  "FRAME 03/04: 5-SLOT MIMIC ROTATION CLEARED BY SPAM RADAR",
+  "FRAME 04/04: MDPI AGITATION COMPLETE — DEPLOY READY"
+];
+
+function triggerViewfinderExposure() {
+  const frameEl = document.getElementById('viewfinderFrame');
+  const countEl = document.getElementById('vfFrameCount');
+  const safelightLabel = document.getElementById('safelightStateLabel');
+  const latencyVal = document.getElementById('vfLatencyVal');
+  const agitationVal = document.getElementById('vfAgitationVal');
+
+  if (!frameEl) return;
+
+  // 1. Analog shutter flash effect
+  const flash = document.createElement('div');
+  flash.className = 'darkroom-shutter-flash';
+  frameEl.appendChild(flash);
+  setTimeout(() => flash.remove(), 350);
+
+  // 2. Cycle frame counter (01 -> 04 -> 01)
+  currentVfFrame = (currentVfFrame % TOTAL_VF_FRAMES) + 1;
+  const frameStr = currentVfFrame < 10 ? `0${currentVfFrame}` : `${currentVfFrame}`;
+  if (countEl) countEl.textContent = frameStr;
+
+  // 3. Dynamic Darkroom Metadata changes
+  if (latencyVal) {
+    const lat = (0.8 + Math.random() * 0.9).toFixed(1);
+    latencyVal.textContent = `${lat}ms`;
+  }
+
+  const agitationStates = [
+    "OPTIMAL (20°C)",
+    "CHEMICAL RINSE (19.8°C)",
+    "STOP BATH READY",
+    "FIXER VERIFIED"
+  ];
+  if (agitationVal) {
+    agitationVal.textContent = agitationStates[currentVfFrame - 1];
+  }
+
+  if (safelightLabel) {
+    safelightLabel.textContent = `EXPOSURE ${frameStr} // ${FRAME_DESCRIPTIONS[currentVfFrame - 1]}`;
+  }
+
+  showToast(`[OPTICAL EXPOSURE] ${FRAME_DESCRIPTIONS[currentVfFrame - 1]}`);
+}
+
+window.triggerViewfinderExposure = triggerViewfinderExposure;
 window.openTestRunnerModal = openTestRunnerModal;
 window.closeTestRunnerModal = closeTestRunnerModal;
 window.startAutomatedTestSuite = startAutomatedTestSuite;
@@ -1646,5 +1702,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollRevealObserver();
   if (window.lucide) lucide.createIcons();
 });
+
 
 
