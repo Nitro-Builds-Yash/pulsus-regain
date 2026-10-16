@@ -1,0 +1,19 @@
+{
+  "name": "pulsus-regain",
+  "version": "1.0.0",
+  "description": "Pulsus Regain - Autonomous AI Research & Outreach Engines (OmniScout, MimicMail, MDPI Automator)",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 4321"
+  },
+  "keywords": [
+    "pulsus-regain",
+    "ai",
+    "automation",
+    "omniscout",
+    "mimicmail",
+    "mdpi"
+  ],
+  "author": "Athota Yashwanth",
+  "license": "MIT"
+}

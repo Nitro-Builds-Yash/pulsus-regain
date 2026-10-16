@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulsus Regain // Autonomous AI Systems &amp; Neural Engines</title>
+  <meta name="description" content="Pulsus Regain - Hyper-engaging portfolio and interactive live workspace showcasing MimicMail (Playwright Webmail Automation), OmniScout (Biomedical Intelligence Pipeline), and MDPI Campaign Automator by Athota Yashwanth." />
+
+  <!-- Modern Clean Typography: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Modern Vector Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Three.js Spatial WebGL Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Confetti Engine -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css?v=20261015g" />
+</head>
+<body class="studio-theme">
+
+  <!-- Interactive Scroll Velocity Progress Bar -->
+  <div class="scroll-progress-track">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Custom Fluid Interactive Cursor Elements -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing"></div>
+
+  <!-- Real-Time Production Status Strip -->
+  <div class="top-status-strip">
+    <div class="container flex-between">
+      <div class="status-indicator-group">
+        <span class="live-core-orb"></span>
+        <span class="core-tag font-mono">CLUSTER_ONLINE</span>
+        <span class="pipe-sep">//</span>
+        <span class="ping-rate font-mono"><i data-lucide="zap" class="icon-xs text-cyan"></i> <span id="realtimePing">21ms</span></span>
+        <span class="pipe-sep">//</span>
+        <span class="mem-rate font-mono"><i data-lucide="cpu" class="icon-xs text-emerald"></i> CHROMIUM 133 &bull; PYTHON 3.11</span>
+      </div>
+
+      <div class="status-clock-group">
+        <span class="clock-display font-mono" id="realtimeClock">00:00:00 UTC</span>
+        <span class="dev-author-tag"><a href="https://github.com/Nitro-Builds-Yash" target="_blank" rel="noopener noreferrer">@Nitro-Builds-Yash</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Glass Navbar -->
+  <header class="floating-header">
+    <div class="container nav-bar-inner">
+      <a href="#hero" class="brand-unit">
+        <div class="brand-logo-hex">
+          <span class="logo-char">P</span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-primary-name">Pulsus Regain</span>
+          <span class="brand-secondary-role">Autonomous Systems &bull; Athota Yashwanth</span>
+        </div>
+      </a>
+
+      <nav class="nav-links-deck">
+        <a href="#tactical-command-deck" class="deck-link active"><i data-lucide="shield" class="icon-xs"></i> Interactive 3D Spatial Deck</a>
+        <a href="#projects" class="deck-link">Arsenal Architecture</a>
+        <a href="#live-sandbox" class="deck-link"><i data-lucide="terminal" class="icon-xs"></i> Interactive Sandbox</a>
+        <a href="#synergy-spec" class="deck-link">Shadow Ops Pipeline</a>
+      </nav>
+
+      <div class="nav-end-group">
+        <div class="spatial-status-badge font-mono">
+          <i data-lucide="shield-alert" class="icon-xs text-white"></i>
+          <span>GLOBAL RESEARCH AI // SECURE</span>
+        </div>
+        <a href="https://github.com/Nitro-Builds-Yash" target="_blank" rel="noopener noreferrer" class="btn btn-luxe-action btn-sm">
+          <i data-lucide="github" class="icon-xs"></i>
+          <span>GitHub Code Arsenal</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-content-center">
+      
+      <!-- Live Beacon Pill -->
+      <div class="hero-beacon-pill spatial-beacon-pill">
+        <span class="spatial-signal-pulse"></span>
+        <span class="beacon-label font-mono"><i data-lucide="radio" class="icon-xs text-white"></i> HOLOGRAPHIC QUANTUM RUNTIME &bull; STEALTH DOM ORCHESTRATION</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-title-display">
+        Real-Time Autonomous Research &amp; Outreach Engines <br />
+        <span class="gradient-aurora-text">Mining Scholarly Signals &amp; Stealth Dispatch.</span>
+      </h1>
+
+      <p class="hero-statement">
+        Tactically architected by <strong>Athota Yashwanth</strong> (<a href="https://github.com/Nitro-Builds-Yash" target="_blank" rel="noopener noreferrer" class="author-handle-link">@Nitro-Builds-Yash</a>). Production-grade spatial AI subsystems: <strong>OmniScout</strong> intercepts medical intelligence across 10 encrypted scholarly nodes, while <strong>MimicMail</strong> deploys cloaked Chromium shadow sessions to bypass spam radar.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#tactical-command-deck" class="btn btn-luxe-primary btn-glow-gold">
+          <i data-lucide="crosshair"></i>
+          <span>Explore Live 3D Spatial Deck</span>
+        </a>
+        <button type="button" class="btn btn-luxe-primary" onclick="openTestRunnerModal()">
+          <i data-lucide="flask-conical" class="icon-sm"></i>
+          <span>Run Live Test Suite</span>
+        </button>
+        <a href="#live-sandbox" class="btn btn-luxe-glass">
+          <i data-lucide="play"></i>
+          <span>Launch Interactive Operations</span>
+        </a>
+      </div>
+
+      <!-- Live Floating Metrics Ribbon -->
+      <div class="live-metrics-ribbon spatial-metrics-ribbon">
+        <div class="metric-segment">
+          <span class="metric-digit text-white">10</span>
+          <span class="metric-caption">Scholarly Surveillance Nodes</span>
+        </div>
+        <div class="metric-vertical-divider"></div>
+        <div class="metric-segment">
+          <span class="metric-digit text-emerald">100%</span>
+          <span class="metric-caption">Zero-Gmail Firewall Shield</span>
+        </div>
+        <div class="metric-vertical-divider"></div>
+        <div class="metric-segment">
+          <span class="metric-digit text-cyan">5-Slot</span>
+          <span class="metric-caption">Cloaked HTML Rotator</span>
+        </div>
+        <div class="metric-vertical-divider"></div>
+        <div class="metric-segment">
+          <span class="metric-digit text-white">250 OK</span>
+          <span class="metric-caption">DNS MX Radar Verification</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       LIVE 3D SPATIAL TELEMETRY DECK (Interactive WebGL)
+       ==================================================================== -->
+  <section id="tactical-command-deck" class="section stage-spatial-section">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <div class="spatial-intel-badge">
+          <i data-lucide="shield" class="icon-xs text-white"></i>
+          <span class="font-mono">SPATIAL TELEMETRY MATRIX // REAL-TIME 3D ORBIT</span>
+        </div>
+        <h2 class="section-heading-lg spatial-heading">Live 3D Spatial Telemetry Matrix</h2>
+        <p class="section-subtext">Click and drag in spatial vacuum to orbit nodes. Rotate perspectives, inspect orbital sensor swarms, and launch tactical diagnostic pulses.</p>
+      </div>
+
+      <!-- Spatial Command Glass Container -->
+      <div class="stage-spatial-wrapper">
+        <div class="stage-spatial-canvas-box" id="stage3dContainer">
+          <canvas id="stage3dCanvas"></canvas>
+          
+          <!-- Overlaid Tactical HUD Controls -->
+          <div class="stage-spatial-hud-overlay spatial-hud">
+            <div class="hud-topbar spatial-hud-bar">
+              <div class="hud-brand-tag">
+                <i data-lucide="crosshair" class="icon-xs text-white"></i>
+                <span class="font-mono" id="hudSystemTitle">SUBSYSTEM: OMNISCOUT SURVEILLANCE RADAR</span>
+              </div>
+              <div class="hud-stats-group font-mono">
+                <span class="hud-stat text-emerald"><i data-lucide="activity" class="icon-xs"></i> 60 FPS ORBIT</span>
+                <span class="hud-stat text-white"><i data-lucide="radar" class="icon-xs"></i> 60 FPS DYNAMIC 3D ORBIT</span>
+              </div>
+            </div>
+
+            <!-- Gamified Mission Mode Switcher -->
+            <div class="hud-center-controls">
+              <div class="spatial-mode-selector">
+                <button class="spatial-toggle-btn active" id="btn3dOmni" onclick="setSpatialMission('omniscout')">
+                  <i data-lucide="microscope" class="icon-xs"></i>
+                  <span>OmniScout Swarm</span>
+                </button>
+                <button class="spatial-toggle-btn" id="btn3dMimic" onclick="setSpatialMission('mimicmail')">
+                  <i data-lucide="send" class="icon-xs"></i>
+                  <span>MimicMail Stealth</span>
+                </button>
+                <button class="spatial-toggle-btn" id="btn3dMdpi" onclick="setSpatialMission('mdpi')">
+                  <i data-lucide="mail-check" class="icon-xs"></i>
+                  <span>MDPI Automator</span>
+                </button>
+                <button class="spatial-toggle-btn" id="btn3dSynergy" onclick="setSpatialMission('pipeline')">
+                  <i data-lucide="workflow" class="icon-xs"></i>
+                  <span>Unified Pipeline</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="hud-footer-info spatial-hud-footer">
+              <span class="hud-tip font-mono"><i data-lucide="move" class="icon-xs"></i> Drag in spatial view to steer perspective &bull; Scroll to calibrate zoom</span>
+              <span class="hud-node-count font-mono" id="hudNodeInfo">10 REGISTRIES // ZERO-GMAIL MATRIX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tactical Telemetry Inspector Sidebar -->
+        <div class="stage-spatial-sidebar">
+          <div class="inspector-card spatial-inspector-card">
+            <div class="inspector-header">
+              <span class="badge-spatial-alert font-mono"><i data-lucide="cpu" class="icon-xs"></i> TACTICAL TELEMETRY</span>
+              <span class="font-mono text-white" id="telemetryId">NODE: QUANTUM-OMNI-01</span>
+            </div>
+            
+            <h4 class="inspector-title spatial-title" id="inspectorTitle">OmniScout 10-Node Swarm</h4>
+            <p class="inspector-desc" id="inspectorDesc">
+              Autonomous spatial intelligence sweeping 10 global research registries concurrently. Enforces hard institutional verification, eliminates non-academic domains, and decrypts institutional author vectors.
+            </p>
+
+            <div class="inspector-metrics-grid spatial-grid">
+              <div class="ins-metric-card spatial-ins-card">
+                <span class="ins-label font-mono text-dim">SURVEILLANCE BEAMS</span>
+                <span class="ins-val font-mono text-cyan" id="insMetric1">10 Streams</span>
+              </div>
+              <div class="ins-metric-card spatial-ins-card">
+                <span class="ins-label font-mono text-dim">DOMAIN DEFENSE</span>
+                <span class="ins-val font-mono text-emerald" id="insMetric2">Zero-Gmail 100%</span>
+              </div>
+              <div class="ins-metric-card spatial-ins-card">
+                <span class="ins-label font-mono text-dim">MX RADAR CHECK</span>
+                <span class="ins-val font-mono text-white" id="insMetric3">Port 25 (250 OK)</span>
+              </div>
+              <div class="ins-metric-card spatial-ins-card">
+                <span class="ins-label font-mono text-dim">EXTRACTION MODE</span>
+                <span class="ins-val font-mono text-white" id="insMetric4">In-Memory PDF</span>
+              </div>
+            </div>
+
+            <div class="inspector-quick-action">
+              <button class="btn btn-luxe-pulse btn-block" id="btnTrigger3DPulse" onclick="triggerTacticalPulse()">
+                <i data-lucide="zap" class="icon-xs"></i>
+                <span id="btnTrigger3DText">Fire Tactical Scan Pulse</span>
+              </button>
+              <a href="https://github.com/Nitro-Builds-Yash" target="_blank" rel="noopener noreferrer" class="btn btn-luxe-glass btn-block">
+                <i data-lucide="github" class="icon-xs"></i>
+                <span>View Open Source Repositories</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Bento Showcase Section -->
+  <section id="projects" class="section bento-showcase-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="aurora-kicker font-mono">PRODUCTION SPECIFICATIONS</span>
+        <h2 class="section-heading-lg">Two Complementary Flagship Systems</h2>
+        <p class="section-subtext">Precision engineered to solve verified researcher discovery and clinical outreach without spam penalties.</p>
+      </div>
+
+      <div class="bento-layout-grid">
+        
+        <!-- Bento Card 1: OmniScout -->
+        <div class="bento-box-card card-omniscout">
+          <div class="bento-card-topbar">
+            <div class="bento-pill pill-violet">
+              <i data-lucide="microscope" class="icon-xs"></i>
+              <span>BIOMEDICAL INTELLIGENCE</span>
+            </div>
+            <a href="https://github.com/Nitro-Builds-Yash/OmniScout" target="_blank" rel="noopener noreferrer" class="link-circle-btn">
+              <i data-lucide="arrow-up-right" class="icon-sm"></i>
+            </a>
+          </div>
+
+          <h3 class="bento-project-title">OmniScout</h3>
+          <p class="bento-description">
+            Biomedical literature and author intelligence platform from OMICS International. Concurrently mines 10 scholarly registries with strict institutional email validation and zero tolerance for non-institutional email providers.
+          </p>
+
+          <div class="bento-bullet-list">
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-emerald"></i>
+              <div>
+                <strong>10 Scholarly Repositories:</strong>
+                <p>PubMed, Europe PMC, PLOS, eLife, OpenAlex, arXiv, bioRxiv, medRxiv, Crossref, and AHA.</p>
+              </div>
+            </div>
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-emerald"></i>
+              <div>
+                <strong>Zero-Gmail Policy &amp; 3-Col Guarantee:</strong>
+                <p>Guarantees output records contain Paper Title, Author Name, and Institutional Email.</p>
+              </div>
+            </div>
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-emerald"></i>
+              <div>
+                <strong>DNS MX Socket Verification:</strong>
+                <p>Verifies domain Mail Exchanger records with simulated handshakes (250 OK) prior to manifest export.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-footer-tags">
+            <span class="code-badge">Python 3.10+</span>
+            <span class="code-badge">Flask 3.0</span>
+            <span class="code-badge">Google Gemini</span>
+            <span class="code-badge">pdfplumber</span>
+            <span class="code-badge">DNS MX</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: MimicMail -->
+        <div class="bento-box-card card-mimicmail">
+          <div class="bento-card-topbar">
+            <div class="bento-pill pill-cyan">
+              <i data-lucide="send" class="icon-xs"></i>
+              <span>STEALTH PLAYWRIGHT OUTREACH</span>
+            </div>
+            <a href="https://github.com/Nitro-Builds-Yash/MimicMail" target="_blank" rel="noopener noreferrer" class="link-circle-btn">
+              <i data-lucide="arrow-up-right" class="icon-sm"></i>
+            </a>
+          </div>
+
+          <h3 class="bento-project-title">MimicMail</h3>
+          <p class="bento-description">
+            Clinical-grade, stealth outreach automation platform for Zoho Mail. Directly automates genuine browser interactions inside Zoho webmail to avoid bulk SMTP blacklisting and spam traps.
+          </p>
+
+          <div class="bento-bullet-list">
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-cyan"></i>
+              <div>
+                <strong>Persistent Browser Session Context:</strong>
+                <p>Authenticates once in the user's default browser profile; Playwright attaches to the session without raw credentials in code.</p>
+              </div>
+            </div>
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-cyan"></i>
+              <div>
+                <strong>5-Slot HTML Template Pool:</strong>
+                <p>Randomly alternates across 5 distinct email variations per recipient to eliminate Bayesian content fingerprinting.</p>
+              </div>
+            </div>
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-cyan"></i>
+              <div>
+                <strong>Anti-Bot Biological Delay Jitter:</strong>
+                <p>Configurable resting cadence (1.0m to 5.0m) with &plusmn;15–35s humanized delay jitter and variable typing cadence.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-footer-tags">
+            <span class="code-badge">Python 3.10+</span>
+            <span class="code-badge">Playwright</span>
+            <span class="code-badge">CustomTkinter</span>
+            <span class="code-badge">Zoho Mail DOM</span>
+            <span class="code-badge">OpenPyXL</span>
+          </div>
+        </div>
+
+        <!-- Bento Card 3: MDPI Campaign Automator -->
+        <div class="bento-box-card card-mdpi">
+          <div class="bento-card-topbar">
+            <div class="bento-pill pill-emerald">
+              <i data-lucide="mail-check" class="icon-xs"></i>
+              <span>MDPI SPECIAL ISSUE CAMPAIGNS</span>
+            </div>
+            <a href="https://github.com/abhilashshiva/mdpi-campaign-automator" target="_blank" rel="noopener noreferrer" class="link-circle-btn">
+              <i data-lucide="arrow-up-right" class="icon-sm"></i>
+            </a>
+          </div>
+
+          <h3 class="bento-project-title">MDPI Campaign Automator</h3>
+          <p class="bento-description">
+            High-throughput editorial outreach automation platform engineered for MDPI and open-access publishers. Orchestrates Special Issue call-for-papers invitations, validates author rosters, and enforces strict rate limits.
+          </p>
+
+          <div class="bento-bullet-list">
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-emerald"></i>
+              <div>
+                <strong>Journal &amp; Special Issue Registry:</strong>
+                <p>Targets MDPI journals (<em>Sensors</em>, <em>Molecules</em>, <em>Cancers</em>, <em>IJMS</em>) with contextualized manuscript invitations matched to author publication records.</p>
+              </div>
+            </div>
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-emerald"></i>
+              <div>
+                <strong>Deduplication &amp; Quarantine Firewall:</strong>
+                <p>Prevents redundant invitations across co-authors, automatically flags prior responders, and filters out unsubscribed academic domains.</p>
+              </div>
+            </div>
+            <div class="bento-bullet">
+              <i data-lucide="check-circle-2" class="bullet-check text-emerald"></i>
+              <div>
+                <strong>Editorial Quota Enforcement:</strong>
+                <p>Implements throttled batching cadence to strictly comply with journal editorial guidelines and ISP sender reputation parameters.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bento-footer-tags">
+            <span class="code-badge">Python 3.10+</span>
+            <span class="code-badge">Automated Outreach</span>
+            <span class="code-badge">MDPI Journals</span>
+            <span class="code-badge">Special Issues</span>
+            <span class="code-badge">CSV Manifest</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE INTERACTIVE OPERATIONAL SANDBOX -->
+  <section id="live-sandbox" class="section sandbox-section">
+    <div class="container">
+      
+      <!-- Studio Header Card with Segmented Switcher -->
+      <div class="sandbox-glass-header">
+        <div class="sandbox-headline">
+          <div class="beacon-label-wrap">
+            <span class="pulsing-beacon-dot"></span>
+            <span class="beacon-txt font-mono">LIVE PRODUCTION SANDBOX // SYSTEM CONTROLLER</span>
+          </div>
+          <h2 class="sandbox-title-h2">Test The Live Working Engines</h2>
+          <p class="sandbox-subtext">Run live simulations, inspect extracted leads in the manifest, watch the terminal logs stream, or trigger the stealth Playwright webmail DOM composer.</p>
+        </div>
+
+        <div class="segmented-control-deck">
+          <button type="button" class="segment-tab-btn active" id="tabBtnOmni" onclick="switchSandboxEngine('omni')">
+            <div class="segment-icon-box icon-omni"><i data-lucide="microscope"></i></div>
+            <div class="segment-text-box">
+              <strong>OmniScout v2.0</strong>
+              <small>10-Source Academic Harvester</small>
+            </div>
+            <span class="live-status-pill bg-violet">ONLINE</span>
+          </button>
+
+          <button type="button" class="segment-tab-btn" id="tabBtnMimic" onclick="switchSandboxEngine('mimic')">
+            <div class="segment-icon-box icon-mimic"><i data-lucide="send"></i></div>
+            <div class="segment-text-box">
+              <strong>MimicMail Engine</strong>
+              <small>Playwright Webmail Dispatcher</small>
+            </div>
+            <span class="live-status-pill bg-cyan">ATTACHED</span>
+          </button>
+
+          <button type="button" class="segment-tab-btn" id="tabBtnMdpi" onclick="switchSandboxEngine('mdpi')">
+            <div class="segment-icon-box icon-mdpi"><i data-lucide="mail-check"></i></div>
+            <div class="segment-text-box">
+              <strong>MDPI Automator</strong>
+              <small>Special Issue Campaign Hub</small>
+            </div>
+            <span class="live-status-pill bg-emerald">READY</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- WORKSPACE 1: OMNISCOUT -->
+      <div id="paneOmni" class="sandbox-workspace-pane active">
+        <div class="workspace-split-grid">
+          
+          <!-- Parameters Left -->
+          <div class="workspace-col-left">
+            <div class="glass-luxe-panel">
+              <div class="panel-header-row">
+                <span class="panel-h3"><i data-lucide="sliders" class="icon-sm text-cyan"></i> Query Parameters</span>
+                <span class="pill-chip font-mono font-xs">REST API + PDF</span>
+              </div>
+
+              <form id="omniForm" onsubmit="event.preventDefault(); executeOmniExtraction();">
+                <div class="field-item">
+                  <label for="omniQueryInput">Research Domain / Medical Topic</label>
+                  <div class="input-icon-wrap">
+                    <i data-lucide="search" class="input-icon-left"></i>
+                    <input type="text" id="omniQueryInput" value="Targeting PD-L1 Resistance in Metastatic Melanoma" placeholder="Enter molecular target, disease, or gene..." required />
+                  </div>
+                  <div class="preset-chips-wrap">
+                    <span>Quick presets:</span>
+                    <button type="button" class="preset-chip" onclick="setQueryPreset('Targeting PD-L1 Resistance in Metastatic Melanoma')">Melanoma</button>
+                    <button type="button" class="preset-chip" onclick="setQueryPreset('CRISPR-Cas9 Base Editing in Hemoglobinopathies')">CRISPR</button>
+                    <button type="button" class="preset-chip" onclick="setQueryPreset('Amyloid-Beta Biomarkers in Neurodegenerative Disease')">Alzheimer's</button>
+                    <button type="button" class="preset-chip" onclick="setQueryPreset('CAR-T Cell Therapy in Solid Tumors')">CAR-T</button>
+                  </div>
+                </div>
+
+                <div class="field-item">
+                  <div class="flex-between">
+                    <label for="omniGeoFilter">Geographic Affiliation Filter</label>
+                    <span class="text-dim font-xs">Worldwide</span>
+                  </div>
+                  <select id="omniGeoFilter" class="clean-dropdown">
+                    <option value="Worldwide">🌐 Worldwide (All Valid Universities &amp; Hospitals)</option>
+                    <option value="United States">🇺🇸 United States (NIH, Top Medical Labs)</option>
+                    <option value="United Kingdom">🇬🇧 United Kingdom (Oxford, Cambridge, NHS)</option>
+                    <option value="Germany">🇩🇪 Germany (Max Planck, Charité)</option>
+                    <option value="Japan">🇯🇵 Japan (Kyoto Univ, RIKEN)</option>
+                    <option value="Canada">🇨🇦 Canada (U of Toronto, McGill)</option>
+                  </select>
+                </div>
+
+                <div class="field-item">
+                  <label>10 Active Academic Connectors</label>
+                  <div class="connectors-mini-tags">
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> PubMed</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> Europe PMC</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> PLOS</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> eLife</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> OpenAlex</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> bioRxiv</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> medRxiv</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> Crossref</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> Frontiers</span>
+                    <span class="conn-item active"><i data-lucide="check" class="icon-xs"></i> AHA</span>
+                  </div>
+                </div>
+
+                <!-- Live Guards -->
+                <div class="security-guards-card">
+                  <div class="guard-item">
+                    <i data-lucide="shield-check" class="icon-sm text-emerald"></i>
+                    <div>
+                      <strong>Zero-Gmail Policy Firewall</strong>
+                      <p>Blocks non-institutional consumer domains (@gmail, @yahoo) to guarantee delivery to legitimate academic institutions.</p>
+                    </div>
+                  </div>
+                  <div class="guard-item mt-10">
+                    <i data-lucide="check-circle-2" class="icon-sm text-emerald"></i>
+                    <div>
+                      <strong>DNS MX Handshake Socket Verification</strong>
+                      <p>Confirms destination mail exchanger server responds with <code>250 OK</code> before inclusion in manifest.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <button type="submit" id="omniRunBtn" class="btn btn-primary-luxe btn-block btn-lg mt-16">
+                  <i data-lucide="play" class="icon-sm"></i>
+                  <span>Execute Extraction Job</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Manifest & Logs Right -->
+          <div class="workspace-col-right">
+            
+            <!-- Progress Card -->
+            <div class="glass-luxe-panel mb-16" id="omniProgressPanel" style="display: none;">
+              <div class="progress-title-row">
+                <span id="omniProgressStepTitle"><i data-lucide="loader-2" class="icon-sm spin"></i> Querying 10 Academic Engines...</span>
+                <span class="font-mono text-cyan" id="omniProgressPctText">0%</span>
+              </div>
+              <div class="luxe-progress-bar">
+                <div id="omniProgressFillBar" class="luxe-progress-fill" style="width: 0%;"></div>
+              </div>
+              <div class="progress-sub-info">
+                <span id="omniProgressSubinfo">Spawning parallel worker threads</span>
+                <span id="omniProgressClock" class="font-mono text-dim">0.0s elapsed</span>
+              </div>
+            </div>
+
+            <!-- Leads Manifest Card -->
+            <div class="glass-luxe-panel">
+              <div class="panel-header-row">
+                <div class="flex-align-center gap-10">
+                  <span class="panel-h3"><i data-lucide="database" class="icon-sm text-cyan"></i> Verified Leads Manifest</span>
+                  <span class="badge-count-pill" id="omniManifestCount">0 Contacts</span>
+                </div>
+                
+                <div class="action-buttons-strip">
+                  <button type="button" class="btn btn-glass-nav btn-sm" onclick="copyManifestEmails()">
+                    <i data-lucide="copy" class="icon-xs"></i> Copy Emails
+                  </button>
+                  <button type="button" class="btn btn-glass-nav btn-sm" onclick="exportManifestCsv()">
+                    <i data-lucide="file-spreadsheet" class="icon-xs"></i> Export .CSV
+                  </button>
+                  <button type="button" class="btn btn-primary-luxe btn-sm btn-cyan" onclick="pipeToMimicMailQueue()">
+                    <i data-lucide="send" class="icon-xs"></i> Pipe to MimicMail
+                  </button>
+                </div>
+              </div>
+
+              <!-- Modern Clean Table -->
+              <div class="table-scroll-wrapper">
+                <table class="luxe-data-table" id="omniDataTable">
+                  <thead>
+                    <tr>
+                      <th style="width: 45px;">#</th>
+                      <th>Publication Title</th>
+                      <th>Corresponding Author</th>
+                      <th>Institutional Email</th>
+                      <th>Source</th>
+                      <th>DNS MX</th>
+                    </tr>
+                  </thead>
+                  <tbody id="omniTableBody">
+                    <tr class="empty-state-row">
+                      <td colspan="6">
+                        <div class="empty-placeholder-box">
+                          <i data-lucide="search" class="empty-icon-lg"></i>
+                          <h4>No Records In Manifest</h4>
+                          <p>Click "Execute Extraction Job" to discover verified corresponding authors from PubMed, PLOS, and Europe PMC.</p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Terminal Audit Logs -->
+              <div class="terminal-shell-box mt-16">
+                <div class="terminal-shell-top">
+                  <div class="shell-dots"><span></span><span></span><span></span></div>
+                  <span class="shell-title font-mono">OMNISCOUT_EXTRACTION_DAEMON &bull; STREAMING LOGS</span>
+                  <button type="button" class="shell-clear-btn" onclick="clearOmniLogs()">Clear</button>
+                </div>
+                <div class="shell-screen-logs font-mono" id="omniLogsScreen">
+                  <div class="log-row text-dim">[INIT] OmniScout Intelligence Platform initialized. 10 repository connectors online.</div>
+                  <div class="log-row text-dim">[FILTER] Zero-Gmail policy firewall active. Awaiting query dispatch.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKSPACE 2: MIMICMAIL -->
+      <div id="paneMimic" class="sandbox-workspace-pane">
+        <div class="workspace-split-grid">
+          
+          <!-- Parameters Left -->
+          <div class="workspace-col-left">
+            <div class="glass-luxe-panel">
+              <div class="panel-header-row">
+                <span class="panel-h3"><i data-lucide="mail-check" class="icon-sm text-cyan"></i> Outreach Cadence</span>
+                <span class="pill-chip tag-cyan font-mono font-xs">PERSISTENT SESSION</span>
+              </div>
+
+              <!-- Session Box -->
+              <div class="session-status-card">
+                <div class="session-active-orb"></div>
+                <div class="session-info-details">
+                  <strong>Persistent Chromium Context Attached</strong>
+                  <p>Profile: <code>.zoho_session</code> &bull; Native Chromium (No credential leakage)</p>
+                </div>
+              </div>
+
+              <!-- Cadence Slider -->
+              <div class="field-item mt-16">
+                <div class="flex-between">
+                  <label for="cadenceSlider">Resting Cadence Between Emails</label>
+                  <span class="font-mono text-cyan font-bold" id="cadenceValDisplay">1.50 min</span>
+                </div>
+                <input type="range" id="cadenceSlider" min="0.5" max="5.0" step="0.5" value="1.5" class="luxe-slider" oninput="changeCadence(this.value)" />
+                <div class="slider-extremes font-mono">
+                  <span>0.5m (Fast)</span>
+                  <span>1.5m (Standard)</span>
+                  <span>5.0m (Stealth Jitter)</span>
+                </div>
+              </div>
+
+              <!-- 5-Slot Template Selection -->
+              <div class="field-item mt-16">
+                <div class="flex-between">
+                  <label>5-Slot Template Rotation Pool</label>
+                  <span class="text-dim font-xs font-mono">Slot 1–5</span>
+                </div>
+                
+                <div class="slot-pills-row">
+                  <button type="button" class="slot-pill active" onclick="selectSlot(1)">Slot 1</button>
+                  <button type="button" class="slot-pill" onclick="selectSlot(2)">Slot 2</button>
+                  <button type="button" class="slot-pill" onclick="selectSlot(3)">Slot 3</button>
+                  <button type="button" class="slot-pill" onclick="selectSlot(4)">Slot 4</button>
+                  <button type="button" class="slot-pill" onclick="selectSlot(5)">Slot 5</button>
+                </div>
+
+                <div class="template-editor-wrapper">
+                  <div class="template-editor-meta">
+                    <span id="slotTitleDisplay">Slot 1: Clinical Editorial Invitation</span>
+                    <span class="font-mono font-xs text-dim">Times New Roman 12pt</span>
+                  </div>
+                  <textarea id="slotEditor" class="luxe-textarea" rows="6"></textarea>
+                  <div class="variables-hint font-mono">
+                    Dynamic variables: <code>{name}</code>, <code>{title}</code>, <code>{email}</code>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Buttons -->
+              <div class="dispatch-buttons-col mt-16">
+                <button type="button" id="startDispatchBtn" class="btn btn-primary-luxe btn-block btn-lg" onclick="launchPlaywrightDispatcher()">
+                  <i data-lucide="play" class="icon-sm"></i>
+                  <span>Launch Playwright Dispatcher</span>
+                </button>
+                <button type="button" id="pauseDispatchBtn" class="btn btn-glass-luxe btn-block btn-lg" style="display: none;" onclick="pausePlaywrightDispatcher()">
+                  <i data-lucide="pause" class="icon-sm"></i>
+                  <span>Pause Dispatch</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Browser Simulator & Excel Sync Right -->
+          <div class="workspace-col-right">
+            
+            <!-- Real-Time Metrics Strip -->
+            <div class="telemetry-metrics-quad">
+              <div class="quad-metric-card">
+                <span class="quad-lbl">Delivered (Sent)</span>
+                <span class="quad-val text-emerald" id="mimicSentCount">0</span>
+              </div>
+              <div class="quad-metric-card">
+                <span class="quad-lbl">Pending in Queue</span>
+                <span class="quad-val text-amber" id="mimicPendingCount">4</span>
+              </div>
+              <div class="quad-metric-card">
+                <span class="quad-lbl">Active Rotated Slot</span>
+                <span class="quad-val text-cyan" id="mimicSlotBadge">Slot 1</span>
+              </div>
+              <div class="quad-metric-card">
+                <span class="quad-lbl">Anti-Bot Jitter Delay</span>
+                <span class="quad-val font-mono" id="mimicCountdown">00:00</span>
+              </div>
+            </div>
+
+            <!-- Zoho Webmail Simulator -->
+            <div class="glass-luxe-panel mb-16">
+              <div class="panel-header-row">
+                <span class="panel-h3"><i data-lucide="laptop" class="icon-sm text-cyan"></i> Playwright Webmail Interaction Feed</span>
+                <span class="badge-status-pill pill-idle" id="browserStatusBadge">BROWSER IDLE</span>
+              </div>
+
+              <div class="browser-frame-box">
+                <div class="browser-frame-nav">
+                  <div class="browser-nav-dots"><span></span><span></span><span></span></div>
+                  <div class="browser-url-input font-mono"><i data-lucide="lock" class="icon-xs text-emerald"></i> https://mail.zoho.com/zm/#mail/compose</div>
+                  <span class="font-mono font-xs text-dim">Chromium Session</span>
+                </div>
+
+                <div class="composer-canvas">
+                  <div class="composer-meta-line">
+                    <span class="line-tag font-mono">TO:</span>
+                    <span class="line-val font-mono text-cyan" id="liveTo">Waiting for dispatcher start...</span>
+                  </div>
+                  <div class="composer-meta-line">
+                    <span class="line-tag font-mono">SUBJECT:</span>
+                    <span class="line-val text-white font-medium" id="liveSub">Editorial Review Invitation — Medical Oncology</span>
+                  </div>
+                  <div class="composer-html-preview" id="liveBody">
+                    <p class="placeholder-italic">Click "Launch Playwright Dispatcher" to preview rich HTML templates rendered in Times New Roman with humanized delay jitter and dynamic bolding.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Real-time Excel Sync -->
+            <div class="glass-luxe-panel">
+              <div class="panel-header-row">
+                <span class="panel-h3"><i data-lucide="file-spreadsheet" class="icon-sm text-emerald"></i> Non-Destructive Spreadsheet Sync</span>
+                <span class="pill-chip font-mono font-xs">./data/processed/registry.xlsx</span>
+              </div>
+
+              <div class="table-scroll-wrapper">
+                <table class="luxe-data-table" id="mimicQueueTable">
+                  <thead>
+                    <tr>
+                      <th style="width: 45px;">#</th>
+                      <th>Author Name</th>
+                      <th>Institutional Email</th>
+                      <th>Paper / Institution</th>
+                      <th>Excel Status</th>
+                      <th>Timestamp</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mimicQueueBody">
+                    <!-- Populated dynamically via JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKSPACE 3: MDPI CAMPAIGN AUTOMATOR -->
+      <div id="paneMdpi" class="sandbox-workspace-pane">
+        <div class="workspace-split-grid">
+          
+          <!-- Parameters Left -->
+          <div class="workspace-col-left">
+            <div class="glass-luxe-panel">
+              <div class="panel-header-row">
+                <span class="panel-h3"><i data-lucide="award" class="icon-sm text-emerald"></i> MDPI Campaign Setup</span>
+                <span class="pill-chip font-mono font-xs">OPEN-ACCESS PUBLISHER ENGINE</span>
+              </div>
+
+              <form id="mdpiForm" onsubmit="event.preventDefault(); launchMdpiCampaign();">
+                <div class="field-item">
+                  <label for="mdpiJournalSelect">Target MDPI Journal</label>
+                  <select id="mdpiJournalSelect" class="clean-dropdown" onchange="updateMdpiSpecialIssues()">
+                    <option value="Sensors">MDPI Sensors (Impact Factor: 3.9)</option>
+                    <option value="Molecules">MDPI Molecules (Impact Factor: 4.6)</option>
+                    <option value="Cancers">MDPI Cancers (Impact Factor: 5.2)</option>
+                    <option value="IJMS">MDPI IJMS - Int. Journal of Molecular Sciences (Impact Factor: 5.6)</option>
+                  </select>
+                </div>
+
+                <div class="field-item">
+                  <label for="mdpiSpecialIssue">Special Issue Call for Papers</label>
+                  <select id="mdpiSpecialIssue" class="clean-dropdown">
+                    <option value="Advanced Microfluidic Biosensors for Early Oncology Diagnostics">"Advanced Microfluidic Biosensors for Early Oncology Diagnostics"</option>
+                    <option value="Synthetic Aperture Radar &amp; Autonomous Aerial Swarms">"Synthetic Aperture Radar &amp; Autonomous Aerial Swarms"</option>
+                    <option value="Novel Bio-Active Nanocomposites in Regenerative Medicine">"Novel Bio-Active Nanocomposites in Regenerative Medicine"</option>
+                  </select>
+                </div>
+
+                <div class="field-item">
+                  <div class="flex-between">
+                    <label for="mdpiGuestEditor">Guest Editor / Signatory</label>
+                    <span class="text-dim font-xs">Verified MDPI Board</span>
+                  </div>
+                  <input type="text" id="mdpiGuestEditor" class="clean-dropdown" value="Prof. Dr. Elena Rostova (Institute for Molecular Systems)" />
+                </div>
+
+                <div class="field-item">
+                  <div class="flex-between">
+                    <label>Editorial Compliance Throttling</label>
+                    <span class="text-emerald font-mono font-xs">25-45s per dispatch</span>
+                  </div>
+                  <div class="compliance-badge-box">
+                    <span class="badge-spatial-alert font-mono"><i data-lucide="shield-check" class="icon-xs"></i> CO-AUTHOR DEDUPLICATION ACTIVE</span>
+                    <span class="badge-spatial-alert font-mono"><i data-lucide="clock" class="icon-xs"></i> 100 INVITATIONS / DAY SAFE QUOTA</span>
+                  </div>
+                </div>
+
+                <div class="form-action-group">
+                  <button type="submit" class="btn btn-luxe-primary btn-block" id="btnRunMdpi">
+                    <i data-lucide="play" class="icon-sm"></i>
+                    <span id="btnMdpiText">Deploy Special Issue Campaign</span>
+                  </button>
+                  <button type="button" class="btn btn-luxe-glass btn-block" onclick="resetMdpiCampaign()">
+                    <i data-lucide="rotate-ccw" class="icon-sm"></i>
+                    <span>Reset Campaign Roster</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Campaign Audit Terminal -->
+            <div class="glass-luxe-panel mt-16">
+              <div class="panel-header-row">
+                <span class="panel-h3"><i data-lucide="terminal" class="icon-sm text-emerald"></i> Editorial Compliance Stream</span>
+                <span class="pill-chip font-mono font-xs" id="mdpiStreamState">LISTENING</span>
+              </div>
+              <div class="terminal-view-box font-mono" id="mdpiTerminalLogs">
+                <div class="term-line"><span class="term-time">[00:00:00]</span> <span class="term-info">MDPI Campaign Automator initialized.</span></div>
+                <div class="term-line"><span class="term-time">[00:00:01]</span> <span class="term-ok">Special Issue database connected: Sensors / IJMS / Cancers.</span></div>
+                <div class="term-line"><span class="term-time">[00:00:02]</span> <span class="term-dim">Author deduplication engine listening on port 8084.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Campaign Roster Table & Invitation Preview Right -->
+          <div class="workspace-col-right">
+            
+            <!-- Real-Time Metrics Strip -->
+            <div class="telemetry-metrics-quad">
+              <div class="quad-metric-card">
+                <span class="quad-lbl">Invited Scholars</span>
+                <span class="quad-val text-emerald" id="mdpiSentCount">0</span>
+              </div>
+              <div class="quad-metric-card">
+                <span class="quad-lbl">Pending Reviewers</span>
+                <span class="quad-val text-amber" id="mdpiPendingCount">5</span>
+              </div>
+              <div class="quad-metric-card">
+                <span class="quad-lbl">Active Journal</span>
+                <span class="quad-val text-white" id="mdpiActiveJournalBadge">MDPI Sensors</span>
+              </div>
+              <div class="quad-metric-card">
+                <span class="quad-lbl">Campaign Status</span>
+                <span class="quad-val text-emerald font-mono" id="mdpiStatusBadge">IDLE</span>
+              </div>
+            </div>
+
+            <!-- Invitation Letter Previewer -->
+            <div class="glass-luxe-panel mb-16">
+              <div class="panel-header-row">
+                <span class="panel-h3"><i data-lucide="file-text" class="icon-sm text-emerald"></i> Special Issue Formal Invitation Generator</span>
+                <span class="badge-status-pill pill-idle font-mono" id="mdpiLetterBadge">TEMPLATE LOADED</span>
+              </div>
+
+              <div class="browser-frame-box">
+                <div class="browser-frame-nav">
+                  <div class="browser-nav-dots"><span></span><span></span><span></span></div>
+                  <div class="browser-url-input font-mono"><i data-lucide="check-circle" class="icon-xs text-emerald"></i> https://susy.mdpi.com/user/manuscripts/invite</div>
+                  <span class="font-mono font-xs text-dim">MDPI Editorial Portal</span>
+                </div>
+
+                <div class="composer-canvas">
+                  <div class="composer-meta-line">
+                    <span class="line-tag font-mono">RECIPIENT:</span>
+                    <span class="line-val font-mono text-emerald" id="mdpiPreviewRecipient">Select an author or launch campaign to view formal letter</span>
+                  </div>
+                  <div class="composer-meta-line">
+                    <span class="line-tag font-mono">JOURNAL:</span>
+                    <span class="line-val text-white font-medium" id="mdpiPreviewJournal">MDPI Sensors (Special Issue)</span>
+                  </div>
+                  <div class="composer-html-preview" id="mdpiPreviewBody">
+                    <p class="placeholder-italic">Click "Deploy Special Issue Campaign" to watch automated personalized invitations generated for top published authors with full citation matching.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Author Invitation Roster -->
+            <div class="glass-luxe-panel">
+              <div class="panel-header-row">
+                <span class="panel-h3"><i data-lucide="users" class="icon-sm text-emerald"></i> Target Researcher Roster</span>
+                <span class="pill-chip font-mono font-xs">./campaigns/mdpi_author_manifest.csv</span>
+              </div>
+
+              <div class="table-scroll-wrapper">
+                <table class="luxe-data-table" id="mdpiQueueTable">
+                  <thead>
+                    <tr>
+                      <th style="width: 45px;">#</th>
+                      <th>Researcher Name</th>
+                      <th>Affiliated Institution</th>
+                      <th>Prior Matching Publication</th>
+                      <th>Campaign Status</th>
+                      <th>Audit Stamp</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mdpiQueueBody">
+                    <!-- Populated dynamically via JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical System Specs / Synergy Walkthrough -->
+  <section id="synergy-spec" class="section spec-walkthrough-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="aurora-kicker font-mono">COHESIVE PIPELINE SPEC</span>
+        <h2 class="section-heading-lg">Architectural Synergy</h2>
+        <p class="section-subtext">How OmniScout and MimicMail form an end-to-end intelligent biomedical research, discovery, and outreach pipeline.</p>
+      </div>
+
+      <div class="spec-flow-row">
+        <div class="spec-step-box">
+          <div class="step-badge-tag font-mono">STAGE 01</div>
+          <div class="spec-icon-box icon-omni"><i data-lucide="database"></i></div>
+          <h4 class="step-title">Scholarly Harvest</h4>
+          <p class="step-text">OmniScout parses millions of papers across 10 global repos, locating principal investigators and institutional affiliations without disk bloat.</p>
+        </div>
+
+        <div class="spec-connector-arrow"><i data-lucide="arrow-right"></i></div>
+
+        <div class="spec-step-box">
+          <div class="step-badge-tag font-mono">STAGE 02</div>
+          <div class="spec-icon-box icon-shield"><i data-lucide="shield-check"></i></div>
+          <h4 class="step-title">Firewall &amp; DNS MX</h4>
+          <p class="step-text">Consumer webmails (@gmail) are purged. Qualified institutional emails undergo live DNS MX socket probing to confirm active mail exchangers.</p>
+        </div>
+
+        <div class="spec-connector-arrow"><i data-lucide="arrow-right"></i></div>
+
+        <div class="spec-step-box">
+          <div class="step-badge-tag font-mono">STAGE 03</div>
+          <div class="spec-icon-box icon-mimic"><i data-lucide="send"></i></div>
+          <h4 class="step-title">Stealth Delivery</h4>
+          <p class="step-text">MimicMail accepts the verified author manifest, attaches to Zoho Mail's native session, rotates templates across 5 slots, and applies organic jitter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Minimalist Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content-row">
+      <div class="footer-brand-side">
+        <div class="footer-name-logo">Pulsus Regain</div>
+        <p class="footer-meta-bio">Autonomous AI &amp; Research Systems &bull; Built by Athota Yashwanth</p>
+      </div>
+
+      <div class="footer-nav-links">
+        <a href="https://github.com/Nitro-Builds-Yash/MimicMail" target="_blank" rel="noopener noreferrer">MimicMail Repo</a>
+        <a href="https://github.com/Nitro-Builds-Yash/OmniScout" target="_blank" rel="noopener noreferrer">OmniScout Repo</a>
+        <a href="https://github.com/abhilashshiva/mdpi-campaign-automator" target="_blank" rel="noopener noreferrer">MDPI Automator Repo</a>
+        <a href="https://github.com/Nitro-Builds-Yash" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       INTERACTIVE FLOATING TACTICAL DOCK (Inspired by William Le / visionOS)
+       ==================================================================== -->
+  <div class="floating-dock-container">
+    <div class="floating-dock-glass" id="interactiveDock">
+      <a href="#hero" class="dock-item active" data-tooltip="Command Matrix">
+        <div class="dock-icon-box">
+          <i data-lucide="home"></i>
+        </div>
+      </a>
+      <a href="#tactical-command-deck" class="dock-item" data-tooltip="Spatial Radar">
+        <div class="dock-icon-box">
+          <i data-lucide="compass"></i>
+        </div>
+      </a>
+      <a href="#projects" class="dock-item" data-tooltip="Bento Arsenal">
+        <div class="dock-icon-box">
+          <i data-lucide="layers"></i>
+        </div>
+      </a>
+      <a href="#live-sandbox" class="dock-item" data-tooltip="Live Sandbox">
+        <div class="dock-icon-box">
+          <i data-lucide="terminal"></i>
+        </div>
+      </a>
+      <a href="#synergy-spec" class="dock-item" data-tooltip="Shadow Pipeline">
+        <div class="dock-icon-box">
+          <i data-lucide="workflow"></i>
+        </div>
+      </a>
+      <div class="dock-divider"></div>
+      <button class="dock-item btn-dock-pulse" onclick="triggerTacticalPulse()" data-tooltip="Quick Diagnostic Pulse">
+        <div class="dock-icon-box text-white">
+          <i data-lucide="zap"></i>
+        </div>
+      </button>
+      <a href="https://github.com/Nitro-Builds-Yash" target="_blank" rel="noopener noreferrer" class="dock-item" data-tooltip="GitHub Profile">
+        <div class="dock-icon-box">
+          <i data-lucide="github"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       INTERACTIVE LIVE END-TO-END TEST SUITE MODAL
+       ==================================================================== -->
+  <div id="testRunnerModal" class="test-modal-backdrop" style="display: none;">
+    <div class="test-modal-card">
+      <div class="test-modal-header">
+        <div class="test-header-left">
+          <i data-lucide="check-circle" class="icon-sm text-emerald"></i>
+          <div>
+            <h3 class="test-modal-title">Live Automated System Test Suite</h3>
+            <span class="test-modal-subtitle font-mono">INTEGRATION &bull; DOM EMULATION &bull; API SOCKETS</span>
+          </div>
+        </div>
+        <button type="button" class="test-modal-close" onclick="closeTestRunnerModal()">
+          <i data-lucide="x" class="icon-sm"></i>
+        </button>
+      </div>
+
+      <div class="test-modal-body">
+        <div class="test-summary-strip font-mono">
+          <div class="test-stat-item">
+            <span class="text-dim">TOTAL TESTS:</span>
+            <span class="text-white font-bold" id="testTotalCount">6</span>
+          </div>
+          <div class="test-stat-item">
+            <span class="text-dim">PASSED:</span>
+            <span class="text-emerald font-bold" id="testPassedCount">0</span>
+          </div>
+          <div class="test-stat-item">
+            <span class="text-dim">FAILED:</span>
+            <span class="text-dim font-bold" id="testFailedCount">0</span>
+          </div>
+          <div class="test-stat-item">
+            <span class="text-dim">RUNTIME:</span>
+            <span class="text-cyan font-bold" id="testDurationVal">0.00s</span>
+          </div>
+        </div>
+
+        <div class="test-progress-bar-wrap">
+          <div class="test-progress-bar-fill" id="testSuiteProgress" style="width: 0%;"></div>
+        </div>
+
+        <div class="test-cases-list font-mono" id="testCasesContainer">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+        <div class="test-log-terminal font-mono" id="testSuiteTerminal">
+          <div class="term-line"><span class="term-time">[SYSTEM]</span> Ready to execute production regression suite. Click "Run Test Suite" to start.</div>
+        </div>
+      </div>
+
+      <div class="test-modal-footer">
+        <button type="button" class="btn btn-luxe-primary" id="btnExecuteTests" onclick="startAutomatedTestSuite()">
+          <i data-lucide="play" class="icon-xs"></i>
+          <span id="btnExecuteTestsText">Start Test Run</span>
+        </button>
+        <button type="button" class="btn btn-luxe-glass" onclick="closeTestRunnerModal()">
+          <span>Close Inspector</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast-card" style="display: none;">
+    <i data-lucide="info" class="toast-icon"></i>
+    <span id="toastMsg">Action completed successfully.</span>
+  </div>
+
+  <script src="app.js?v=20261015g"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
